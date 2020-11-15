@@ -4,7 +4,7 @@ import boto3
 def lambda_handler(event, context):
     
     region = event['queryStringParameters']['region']
-    instance_tag_value = event['queryStringParameters']['instance']
+    instance_tag_value = event['queryStringParameters']['SmartStartTag']
     instance_ids = []
     
     ec2 = boto3.client('ec2', region_name=region)
